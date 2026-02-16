@@ -1,19 +1,19 @@
-import { create } from 'qrcode'
+import QRCode from 'qrcode'
 import { supabase } from '@/lib/supabase/client'
 
 export async function generateQRCode(businessId: string, productId: string) {
   try {
     // Generate QR code as data URL
-    const qrCodeDataUrl = await create(
+    const qrCodeDataUrl = await QRCode.toDataURL(
       `${process.env.NEXT_PUBLIC_SUPABASE_URL}/scan/${businessId}/${productId}`,
       {
-        type: 'image/png',
-        quality: 0.9,
+        errorCorrectionLevel: 'H',
         margin: 1,
         color: {
-          dark: '#000000ff',
-          light: '#ffffffff'
-        }
+          dark: '#000000',
+          light: '#FFFFFF'
+        },
+        width: 512
       }
     )
 
@@ -101,7 +101,6 @@ export async function trackQRScan(businessId: string, productId: string) {
     }
 
     // Log scan (optional - for detailed tracking)
-    // Note: You may need to create this table in your schema
     try {
       await supabase
         .from('qr_scans')

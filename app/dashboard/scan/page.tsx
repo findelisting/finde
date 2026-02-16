@@ -1,17 +1,29 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useParams } from 'next/navigation'
 import { supabase } from '@/lib/supabase/client'
 import Image from 'next/image'
 
+// Add this interface
+interface Product {
+  id: string
+  name: string
+  description: string
+  image_url: string | null
+  created_at: string
+}
+
 export default function ScanPage() {
-  const [product, setProduct] = useState(null)
+  const [product, setProduct] = useState<Product | null>(null)  // Update this line
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState<string | null>(null)  // Update this line
   const { id } = useParams()
 
   useEffect(() => {
-    fetchProduct(id)
+    if (id) {
+      fetchProduct(id as string)
+    }
   }, [id])
 
   const fetchProduct = async (productId: string) => {
@@ -24,7 +36,7 @@ export default function ScanPage() {
 
       setProduct(data)
       setLoading(false)
-    } catch (err) {
+    } catch (err: any) {
       setError(err.message)
       setLoading(false)
     }
