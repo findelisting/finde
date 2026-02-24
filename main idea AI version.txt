@@ -1,0 +1,66 @@
+This revised document comprehensively captures the features, workflows, and logic of the Finde Business Operating System (BOS), incorporating the specific user hierarchy and future-dated features from your source documents.
+
+1. Core Concept: Multi-Modal Discovery Engine
+
+Finde is a system designed to bridge the gap between physical commerce and digital transactions. It allows users to transform raw media (video, audio, or images) into searchable, transactable listings through an AI-driven "Sieve" process.
+
+2. User Hierarchy & Access Logic
+
+Guest Users
+Definition: Individuals who interact with the system via QR codes or links without having the app.
+Capabilities: They can do everything from browsing to patronizing products, services, or events.
+Payments: They are allowed to make transactions through integrated systems like VISA or MOMO.
+Constraints: They cannot create any content (Products, Services, Events, or Objects).
+
+Private Users
+Definition: Authenticated users who have signed up but have not provided a Ghana Card or indicated business status.
+Registration: The main registrant must upload details for identification.
+Capabilities: They can create Objects (O) and Events (E).
+Constraints: Their content is strictly non-searchable and accessible only via direct links, QR codes, or PIN protection.
+Upgrading: Posting an Event requires Ghana Card registration; listing Products or Services requires moving to a Business Account.
+Profile Features: Includes a history of searches, a list of "Loved" items, items purchased, and a list of followed businesses.
+
+Business Users (Unverified vs. Verified)
+Registration: Must indicate business intent, provide a description, location (Google Maps), and years of operation.
+Officially Registered (Verified/Orange Tick): Businesses validated via Ghana Card, TIN, or Business Certificate.
+Assurance Logic: Unverified businesses can be assured/verified after 3 months of usage.
+Capabilities: Full visibility in "Search by Image" and proximity results, full inventory management, and creation of AI Agents.
+Integration: Can add social media handles to their pages which redirect users to those platforms.
+
+3. The PSE+O Framework
+
+Entities are organized into a hierarchy to facilitate discovery:
+Products (P): Tangible items for sale, featuring inventory tracking. Can be uploaded as units or categories.
+
+Services (S): Intangible offerings listed under a business page.
+Events (E): Organizable activities with ticket payment integration. Visitors are automatically added to a "Get Notified" list when exiting the event page.
+Objects (O): Atomic media units (images, audio, files) that provide context.
+Logic: Can be attached to a P, S, or E via drag-and-drop or exist as a standalone QR code (e.g., a birthday cake with an embedded song).
+
+4. Key Discovery & Creation Features
+
+The AI Sieve: Extracts frames and metadata from uploaded video or audio to draft listings for human approval.
+Importing: Products can also be imported via Excel sheets or from other social media accounts.
+Search by Image: A visual engine where taking a photo (plus location) finds exact/similar products in the user's vicinity.
+Notifier System: Visitors opt-in to updates; businesses can send broad notifications to these subscribers regarding new arrivals.
+
+5. Business Operations & AI Agents
+
+Businesses can create digital "Agents" (initially free) to handle daily functions:
+Sales Agents: Understand business logic and prices to chat with users on WhatsApp, Telegram, or the Finde app.
+Marketing Agents: Create campaign strategies and manage/post to linked social media platforms.
+Automation Agents: Suggest and handle automation processes from end-to-end.
+Business Reasoning Agents: Research and provide ways to improve the business.
+Dashboards: Provide views of sales, inventory, message history, and "Notifier" subscriber counts.
+
+6. Trust, Safety & Privacy
+Oversight Console: Finde maintains "Compliance Access". An AI agent scans all uploads (public and private) for illegal activity like narcotics or weapons.
+
+
+PIN Logic: Private pages or objects can be locked behind a PIN.
+Payments: Integrated MOMO/Visa processing with automated invoice generation and email receipts.
+
+7. Future Features
+Web-as-a-Feature: The ability for business pages to be captured as web pages and deployed as standalone websites with custom domains.
+QR Code Games: A feature where a business creates a game as an Event, attaching several clues on a trail captured under QR codes.
+Would you like me to focus on the specific logic for the Identity Attestation (Ghana Card API) or detail the Oversight Console's moderation workflow next?

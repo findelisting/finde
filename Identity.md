@@ -1,0 +1,9 @@
+Identity =
+Object =
+Listing =
+Tenant =
+Interaction =
+Event =
+State =
+Permission =
+Agent =
